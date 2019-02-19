@@ -16,5 +16,6 @@ module.exports = {
             .addField('Number of Channels (& Categories)', channelCount)
             .addField('Number of Roles', roleCount)
         message.channel.send(embed);
+        console.log(`${message.author.tag} (${message.author.id}) just checked for ${gld.name} info!`);
     }
 }

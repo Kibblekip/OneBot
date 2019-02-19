@@ -23,12 +23,6 @@ client.on('message', message => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
 
-	switch(command){
-		case 'ping': console.log(`${message.author.tag} (${message.author.id}) just checked my ping!`);
-	break;
-	default: console.log('ERROR: "ping" command failed to execute!')
-	}
-
 if (!client.commands.has(command)) return;
 
 	try {
