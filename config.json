@@ -1,0 +1,8 @@
+{
+    "name": "OneBot",
+    "version_num": "0.1.0",
+    "main_file": "main.js",
+    "author": "Kibblekip",
+
+	"prefix": "]"
+}
