@@ -1,5 +1,5 @@
 const fs = require('fs');
-const Discord = require('discord.js');
+global.Discord = require('discord.js');
 const { prefix } = require('./config.json');
 const { token } = require('./token.json')
 
@@ -26,7 +26,7 @@ client.on('message', message => {
 	switch(command){
 		case 'ping': console.log(`${message.author.tag} (${message.author.id}) just checked my ping!`);
 	break;
-	default: console.log('ERROR: Command failed to execute!')
+	default: console.log('ERROR: "ping" command failed to execute!')
 	}
 
 if (!client.commands.has(command)) return;
