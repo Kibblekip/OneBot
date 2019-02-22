@@ -4,6 +4,7 @@ const { prefix } = require('./config.json');
 const { token } = require('./token.json')
 
 const client = new Discord.Client();
+global.client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -13,7 +14,7 @@ for (const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-client.once('ready', () => {
+client.on('ready', () => {
     console.log('Ready to go!');
 });
 
@@ -33,6 +34,10 @@ if (!client.commands.has(command)) return;
 
 
 }})
+
+client.on('ready', () => {
+	client.user.setActivity('My prefix is "]"')
+})
 
 // login to Discord using the app's token
 client.login(token);

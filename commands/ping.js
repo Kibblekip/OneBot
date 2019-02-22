@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'ping',
-	desc: 'Checks the ping.',
+	desc: 'Checks the bot ping.',
 	execute(message, args) {
 			message.channel.send('Pinging...')
 				.then((sent) => {
