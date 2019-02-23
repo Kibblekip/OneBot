@@ -36,7 +36,7 @@ if (!client.commands.has(command)) return;
 }})
 
 client.on('ready', () => {
-	client.user.setActivity('My prefix is "]"')
+	client.user.setActivity(`My prefix is ']'`)
 })
 
 // login to Discord using the app's token
